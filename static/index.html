@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>AI for finance Hack 2025</title>
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="/static/styles.css">
+
+
+  <script src="/static/script.js" defer></script>
+  
+</head>
+<body>
+
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">AI for finance Hack 2025</a>
+      <div class="text-warning">Хакатон — демо</div>
+    </div>
+  </nav>
+
+  <main class="container my-4">
+    <div class="row g-4">
+
+
+      <div class="col-12 col-lg-4">
+        <div class="card mb-3 shadow-sm">
+          <div class="card-body">
+            <div class="d-flex align-items-center">
+              <div class="me-3 profile-avatar">А</div>
+              <div>
+                <h5 id="userName" class="card-title mb-0">Александр</h5>
+                <small class="text-muted">Доступный счёт</small>
+              </div>
+            </div>
+
+            <hr>
+
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <div>
+                <div class="text-muted">Баланс на карте</div>
+                <div id="balance" class="fs-4 fw-bold">0 ₽</div>
+              </div>
+              <div>
+                <button id="btn-open-deposit" class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#openDepositModal">
+                  Открыть вклад
+                </button>
+              </div>
+            </div>
+
+            <div class="small text-muted">Карта: <span id="cardNumber">**** **** **** 4242</span></div>
+          </div>
+        </div>
+
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Короткая статистика</h6>
+            <ul class="list-unstyled mb-0">
+              <li>Вкладов: <span id="depositsCount">0</span></li>
+              <li>Всего на вкладах: <span id="depositsTotal">0 ₽</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-8">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Открытые вклады</h5>
+            <div id="depositsList" class="list-group">
+
+            </div>
+            <div id="noDeposits" class="text-muted mt-3">Вкладов пока нет — откройте первый.</div>
+          </div>
+        </div>
+
+
+        <div class="card shadow-sm mt-3">
+          <div class="card-body">
+            <h6 class="card-title">История операций</h6>
+            <div id="txHistory" class="small text-muted">Нет операций.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+
+  <div class="modal fade" id="openDepositModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form id="openDepositForm">
+          <div class="modal-header">
+            <h5 class="modal-title">Открыть вклад</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="depName" class="form-label">Название вклада</label>
+              <input id="depName" class="form-control" placeholder="Копилка на мечту" required>
+            </div>
+            <div class="mb-3">
+              <label for="depAmount" class="form-label">Сумма (₽)</label>
+              <input id="depAmount" type="number" min="1" class="form-control" placeholder="10000" required>
+            </div>
+            <div class="mb-3">
+              <label for="depDays" class="form-label">Срок, дней</label>
+              <input id="depDays" type="number" min="1" class="form-control" placeholder="30" required>
+            </div>
+            <div class="form-text">При открытии сумма списывается с баланса карты и появляется в списке вкладов.</div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+            <button type="submit" class="btn btn-primary">Открыть вклад</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <button class="chat-button" id="chatToggle">💬</button>
+  <div class="chat-box" id="chatBox" aria-hidden="true">
+	<div class="chat-header">
+		Финансовый ассистент
+		<button class="chat-close-btn" id="chatClose">✕</button>
+	</div>
+    <div class="chat-messages" id="messages"></div>
+    <div class="chat-input">
+      <input type="text" id="userInput" placeholder="Напишите сообщение..." />
+      <button id="sendButton">➤</button>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

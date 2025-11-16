@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.log
+*.sqlite3
+*.env
+.env
+venv/
+env/
+ENV/
+.venv/
+
+# MacOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Python virtual environments
+*.egg-info/
+dist/
+build/
+
+# Byte-compiled / optimized / DLL files
+*.pyc
+*.pyo
+*.pyd
+
+# Coverage reports
+htmlcov/
+.coverage
+
+# mypy
+.mypy_cache/
+
+# FastAPI / general
+instance/
+*.db
+
+# Node / Frontend (если будет npm)
+node_modules/
+npm-debug.log
+yarn-error.log
