@@ -23,7 +23,7 @@ project/
 ## Шаги запуска
 1. Клонируйте репозиторий и перейдите в корень проекта
 ```
-git clone https://github.com/alexrink96/ai_assistant_case
+git clone https://github.com/alexrink96/ai_hack_final_project
 cd <project_folder>
 ```
 2. Создайте файл .env в корне проекта. Файл **обязателен**, в него вставляется ваш API ключ:
