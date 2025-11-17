@@ -14,6 +14,7 @@ project/
 │── main.py
 │── ai_agent.py
 │── schemas.py
+│── app.log
 │── Dockerfile
 │── requirements.txt
 │── .env        <-- файл с API ключом
